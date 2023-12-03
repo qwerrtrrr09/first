@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.利用对象字面量来创建对象
+        var dog = {
+            uname: '可可',
+            type: '阿拉斯加犬',
+            age: 5,
+            color: 'red',
+            ability: function () {
+                console.log('bark');
+                console.log('showfilm');
+            }
+        }
+        console.log(dog.type);
+        console.log(dog['uname']);
+        dog.ability();
+
+        //2.利用new Obeject来创建对象
+        var mingren = new Object();
+        mingren.uname = '鸣人';
+        mingren.sex = '男';
+        mingren.age = 19;
+        mingren.skill = function () { console.log('影分身术'); }
+        console.log(mingren.uname);
+        console.log(mingren['sex']);
+        mingren.skill();
+
+        //3.构造函数创建对象
+        function hero(name, type, blood, attack) {
+            this.name = name;
+            this.type = type;
+            this.blood = blood;
+            this.attack = function (attack) { console.log(attack); }
+        }
+        var lp = new hero('廉颇', '力量型', '500血量', '近战');
+        console.log(lp.name);
+        console.log(lp['type']);
+        lp.attack('近战');
+        var hy = new hero('后羿', '射手型', '100血量', '远程')
+        console.log(hy.blood);
+        console.log(hy['name']);
+        hy.attack('远程');
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

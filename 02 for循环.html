@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var sum = 0;
+        for (var n = 0; n <= 100; n++) {
+            sum += n;
+        }
+        var average = sum / 100;
+        console.log(average);
+
+        // 2.打印几行几列的*
+        var rows = prompt('请您输入行数：');
+        var cols = prompt('请您输入列数：');
+        var str = '';
+        for (var i = 1; i <= cols; i++) {
+            for (var j = 1; j <= rows; j++) {
+                str += '*';
+            }
+            str += '\n';
+
+        }
+        console.log(str);
+
+        //3.打印倒序的*
+        var str = '';
+        var star = 5;
+        for (var i = 1; i <= star; star--) {
+            for (var j = 1; j <= star; j++) {//for(j=i;j<=5;j++)
+                str += '*';
+            }
+            str += '\n';
+        }
+        console.log(str);
+        console.log('*');
+        console.log('\n');
+
+        //4.九九乘法表
+        var str = '';
+        var star = 1;
+        for (var i = 1; i <= 9; i++, star++) {
+            for (var j = 1; j <= star; j++) {
+                str += j + '*' + i + '=' + i * j + '\t';
+            }
+            str += '\n';
+        }
+        console.log(str);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

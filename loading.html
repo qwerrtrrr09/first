@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    @keyframes move1 {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        25% {
+            transform: translate(42px, 0);
+        }
+
+        50% {
+            transform: translate(42px, 42px);
+        }
+
+        75% {
+            transform: translate(0, 42px);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes move2 {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        25% {
+            transform: translate(0, 42px);
+        }
+
+        50% {
+            transform: translate(-42px, 42px);
+        }
+
+        75% {
+            transform: translate(-42px, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes move3 {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        25% {
+            transform: translate(0, -42px);
+        }
+
+        50% {
+            transform: translate(42px, -42px);
+        }
+
+        75% {
+            transform: translate(42px, 0);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    @keyframes move4 {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        25% {
+            transform: translate(-42px, 0);
+        }
+
+        50% {
+            transform: translate(-42px, -42px);
+        }
+
+        75% {
+            transform: translate(0, -42px);
+        }
+
+        100% {
+            transform: translate(0, 0);
+        }
+    }
+
+    div {
+        width: 26px;
+        height: 26px;
+        border-radius: 13px;
+        display: inline-block;
+        position: absolute;
+        /* 重复次数 */
+        animation-iteration-count: infinite;
+        animation-duration: 2s;
+    }
+
+
+    .one {
+        background-color: yellow;
+        margin-top: 300px;
+        margin-left: 650px;
+        animation-name: move1;
+    }
+
+    .two {
+        background-color: pink;
+        margin-top: 300px;
+        margin-left: 700px;
+        animation-name: move2;
+
+    }
+
+    .three {
+        background-color: rgb(11, 83, 43);
+        margin-top: 350px;
+        margin-left: 650px;
+        animation-name: move3;
+
+    }
+
+    .four {
+        background-color: rgb(21, 212, 34);
+        margin-top: 350px;
+        margin-left: 700px;
+        animation-name: move4;
+    }
+</style>
+
+<body>
+
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sanjiao {
+            float: left;
+            position: relative;
+            width: 140px;
+            margin-top: 32px;
+            text-align: center;
+            /* border: solid black; */
+        }
+
+        .sanjiao::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            transform: rotate(45deg);
+        }
+
+        .caidan {
+            float: left;
+            width: 345px;
+            height: 190px;
+            border-radius: 15px;
+            border: 0.1px solid rgb(208, 208, 200);
+            display: none;
+        }
+
+        h3 {
+            /* 字体不加粗 */
+            font-weight: 400;
+            margin-left: 27px;
+            line-height: 5px;
+            color: rgb(63, 64, 65);
+        }
+
+        h4 {
+            font-weight: 400;
+            margin-left: 27px;
+            line-height: 5px;
+            color: rgb(106, 109, 111);
+
+        }
+
+        .H {
+            margin-top: 40px;
+        }
+
+        .h {
+            margin-top: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="sanjiao">Learn design</div><br>
+    <div class="caidan">
+        <h3 class="H">UX Diploma</h3>
+        <h4>in partnership with UX Design Institute</h4>
+        <h3 class="h">Live interactive workshops</h3>
+        <h4>with design professionals</h4>
+    </div>
+
+    <script>
+        var sanjiao = document.querySelector('.sanjiao');
+        var caidan = document.querySelector('.caidan');
+        sanjiao.onmouseover = function () {
+            caidan.style.display = 'block';
+        }
+        sanjiao.onmouseout = function () {
+            caidan.style.display = 'none';
+        }
+
+
+
+    </script>
+</body>
+
+</html>

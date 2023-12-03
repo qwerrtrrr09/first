@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time">2023-11-28</div>
+    <ul>
+        <li>666</li>
+        <li>666</li>
+        <li>666</li>
+        <li>666</li>
+    </ul>
+    <div class="box">1</div>
+    <div id="nav"></div>
+    <script>
+        //1. getElementById获取元素
+        var timer = document.getElementById('time');
+        console.log(timer);
+        console.dir(timer);//打印元素对象 更好地查看里面地属性和方法
+        //2.getElementByTagName根据标签名获取元素
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+        //3.getElementsByClassName根据类名获得元素
+        var boxs = document.getElementsByClassName('box');
+        console.log(boxs);
+        //4.querySelector返回指定选择器地第一个元素对象 里面的选择器需要加符号.box #nav
+        var one = document.querySelector('.box');
+        console.log(one);
+        var two = document.querySelector('#nav');
+        console.log(two);
+        //5.获取body元素
+        var bodys = document.body;
+        console.log(bodys);
+        //6.获取html元素
+        var htmls = document.documentElement;
+        console.log(htmls);
+    </script>
+</body>
+
+</html>

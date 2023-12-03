@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .ad {
+            width: 1480px;
+            height: 60px;
+            background-color: black;
+            border: solid black;
+        }
+
+        .ad1 {
+            float: left;
+            height: 60px;
+            width: 720px;
+            line-height: 60px;
+            margin-left: 75px;
+            font-size: 30px;
+            font-weight: 600;
+            color: white;
+            /* border: solid red; */
+        }
+
+        .ad2 {
+            float: left;
+            margin-left: 20px;
+            margin-top: 10px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+
+            width: 130px;
+            background-color: rgb(74, 74, 231);
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 10px;
+            border: solid black;
+        }
+
+        .img1 {
+            vertical-align: middle;
+        }
+
+        .ad3 {
+            float: left;
+            height: 40px;
+            width: 50px;
+            margin-left: 250px;
+            font-size: 15px;
+            border: solid black;
+
+        }
+
+        .ad4 {
+            float: left;
+            height: 40px;
+            width: 100px;
+            margin-left: 2px;
+            margin-top: 10px;
+            color: white;
+            font-size: 25px;
+            font-weight: 600;
+            border: solid black;
+        }
+
+        .ad5 {
+            float: left;
+            height: 40px;
+            width: 40px;
+            margin-top: 10px;
+            margin-left: 20px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ad">
+        <div class="ad1">
+            Build and style your site exactly how you want
+        </div>
+        <div class="ad2">See more<img src="ad1.png" alt="" class="img1"></div>
+        <div class="ad3"><img src="ad2.png" width="50px" height="50px" alt=""></div>
+        <div class="ad4">Webflow</div>
+        <div class="ad5"><img src="ad.png" width="40px" height="40px"></div>
+    </div>
+    <script>
+        var ad = document.querySelector('.ad');
+        var ad1 = document.querySelector('.ad5');
+        ad1.onclick = function () {
+            ad.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

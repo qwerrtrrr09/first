@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    .box1 {
+        display: inline-block;
+        overflow: hidden;
+        /* border: solid black; */
+        height: 90px;
+    }
+
+
+
+    .sanjiao {
+        float: left;
+        position: relative;
+        width: 140px;
+        margin-top: 32px;
+        text-align: center;
+        /* border: solid black; */
+    }
+
+    /* 小三角的做法 */
+    .sanjiao::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        transform: rotate(45deg);
+    }
+
+    .caidan {
+        position: absolute;
+        width: 345px;
+        height: 170px;
+        top: 70px;
+        left: 250px;
+        border-radius: 15px;
+        border: 0.1px solid rgb(208, 208, 200);
+        background-color: white;
+        display: none;
+    }
+
+    h3 {
+        /* 字体不加粗 */
+        font-weight: 400;
+        margin-left: 27px;
+        line-height: 32px;
+        color: rgb(63, 64, 65);
+    }
+
+    .hh1 {
+        font-weight: 400;
+        font-size: 15px;
+        margin-left: -8px;
+        line-height: 10px;
+        color: rgb(106, 109, 111);
+
+    }
+
+    .hh2 {
+        font-weight: 400;
+        font-size: 15px;
+        /* ? */
+        margin-left: -107px;
+        line-height: 10px;
+        color: rgb(106, 109, 111);
+
+    }
+
+    .H {
+        margin-top: 25px;
+    }
+
+    .h {
+        margin-top: 30px;
+    }
+
+    .one {
+        float: left;
+        width: 120px;
+        margin-top: 32px;
+        text-align: center;
+        /* border: solid black; */
+    }
+
+    .two {
+        float: left;
+        width: 100px;
+        margin-top: 32px;
+        text-align: center;
+        /* border: solid black; */
+    }
+
+    .three {
+        display: inline-block;
+        width: 410px;
+        margin-top: 28px;
+        text-align: center;
+        font-size: 30px;
+        /* border: solid black; */
+    }
+
+    .text1 {
+        height: 28px;
+        width: 180px;
+        border-radius: 15px;
+        margin-top: 22px;
+        background-color: rgba(234, 234, 239, 0.979);
+        outline: 0;
+        /* 清除蓝色边框 */
+        border: transparent;
+        background-image: url(search.jpg);
+        background-repeat: no-repeat;
+    }
+
+    .four {
+        display: inline-block;
+        width: 90px;
+        margin-top: 32px;
+        text-align: center;
+        /* border: solid black; */
+    }
+
+    .five {
+        float: right;
+        width: 110px;
+        height: 40px;
+        margin-top: 36px;
+        margin-right: 12px;
+        /* 设置line-height与height相同，则可实现盒子里的文字居中 */
+        line-height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        /* border: solid black; */
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+
+    }
+
+    .ad {
+        position: relative;
+        width: 1480px;
+        height: 60px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: black;
+        border: solid black;
+    }
+
+    .ad1 {
+        position: absolute;
+        height: 60px;
+        width: 720px;
+        line-height: 60px;
+        margin-left: 75px;
+        font-size: 30px;
+        font-weight: 600;
+        color: white;
+        /* border: solid red; */
+    }
+
+    .ad2 {
+        position: absolute;
+        margin-left: 20px;
+        margin-top: 10px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+
+        width: 130px;
+        background-color: rgb(74, 74, 231);
+        color: white;
+        font-size: 15px;
+        font-weight: 600;
+        border-radius: 10px;
+        border: solid black;
+    }
+
+    .img1 {
+        vertical-align: middle;
+    }
+
+    .ad3 {
+        position: absolute;
+        height: 40px;
+        width: 50px;
+        margin-left: 250px;
+        font-size: 15px;
+        /* border: solid black; */
+
+    }
+
+    .ad4 {
+        position: absolute;
+        height: 40px;
+        width: 100px;
+        margin-left: 2px;
+        margin-top: 10px;
+        color: white;
+        font-size: 25px;
+        font-weight: 600;
+        /* border: solid black; */
+    }
+
+    .ad5 {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        margin-top: 10px;
+        margin-left: 20px;
+
+
+    }
+
+    .hh3 {
+        position: relative;
+        height: 80px;
+        width: 1000px;
+        margin-left: 240px;
+        margin-top: 5px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 60px;
+        /* border: solid black; */
+    }
+
+    h4 {
+        text-align: center;
+        font-weight: 250;
+        font-size: 20px;
+    }
+
+    .text2 {
+        float: left;
+        height: 50px;
+        width: 500px;
+        margin-top: 50px;
+        margin-left: 500px;
+        margin-bottom: 50px;
+        border-radius: 25px;
+        outline: 0;
+        border: 1px bolid grey;
+
+    }
+
+    .text23 {
+        border-color: pink;
+        box-shadow: 5px 5px 10px 5px pink;
+    }
+
+    .box2 {
+        float: left;
+        height: 30px;
+        width: 950px;
+        /* border: solid black; */
+        margin-left: 330px;
+        /* text-align: center; */
+    }
+
+
+    .landing,
+    .ios,
+    .food,
+    .uxdesign,
+    .app {
+        float: left;
+        border: solid rgb(215, 211, 211);
+        text-align: center;
+        border-radius: 20px;
+        margin-left: 8px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    .Trending {
+        float: left;
+        /* border: solid black; */
+        text-align: center;
+        width: 190px;
+        height: 30px;
+        line-height: 30px;
+
+
+    }
+
+    .landing {
+
+        width: 150px;
+
+
+
+    }
+
+    .ios {
+
+        width: 50px;
+
+    }
+
+    .food {
+
+        width: 80px;
+
+    }
+
+    .uxdesign {
+
+        width: 100px;
+
+    }
+
+    .app {
+
+        width: 110px;
+
+    }
+
+    .box3 {
+        position: relative;
+        height: 80px;
+        width: 1450px;
+        margin-top: 400px;
+        margin-left: 20px;
+        /* border: solid black; */
+    }
+
+    .pop {
+        position: relative;
+        top: 30px;
+        left: 50px;
+        width: 130px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        border: solid rgb(234, 226, 226);
+        border-radius: 10px;
+    }
+
+    .pop::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        border-right: 1px solid black;
+        border-bottom: 1px solid black;
+        transform: rotate(45deg);
+    }
+
+    .dis,
+    .ani,
+    .bra,
+    .ill,
+    .mob,
+    .pri,
+    .typ,
+    .web,
+    .fil {
+        position: absolute;
+        top: 30px;
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        /* border: solid black; */
+    }
+
+    .dis {
+        left: 250px;
+        border-radius: 20px;
+    }
+
+    .dis:hover {
+        background-color: rgb(215, 219, 223);
+    }
+
+    .ani {
+        left: 350px;
+    }
+
+    .bra {
+        left: 450px;
+    }
+
+    .ill {
+
+        left: 550px;
+    }
+
+    .mob {
+        left: 650px;
+    }
+
+    .pri {
+
+        left: 730px;
+    }
+
+    .pro {
+        position: absolute;
+        top: 30px;
+        width: 150px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        /* border: solid black; */
+        left: 810px;
+    }
+
+    .typ {
+
+        left: 970px;
+
+    }
+
+    .web {
+
+        left: 1070px;
+
+    }
+
+    .fil {
+
+        right: 100px;
+        border-radius: 20px;
+        border: solid rgb(191, 195, 198);
+    }
+
+    .box4 {
+        display: flex;
+        border: solid black;
+        height: 340px;
+        width: 1300px;
+        margin-top: 20px;
+        margin-left: 65px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .ved,
+    .srd,
+    .ben {
+        width: 380px;
+        height: 300px;
+        background-color: blueviolet;
+        border-radius: 10px;
+    }
+
+
+    .p1,
+    .p2,
+    .p3 {
+        height: 30px;
+        width: 380px;
+        background-color: rgb(102, 96, 108);
+    }
+
+    .pp1,
+    .pp2,
+    .pp3 {
+        display: inline-block;
+        width: 360px;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: 235px;
+        border: solid black;
+        color: white;
+        /* display: none; */
+    }
+
+    .box5 {
+        display: flex;
+        border: solid black;
+        height: 340px;
+        width: 1300px;
+        margin-top: 20px;
+        margin-left: 65px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .ale,
+    .fra,
+    .squ {
+        width: 380px;
+        height: 300px;
+        background-color: blueviolet;
+        border-radius: 10px;
+    }
+
+
+    .p4,
+    .p5,
+    .p6 {
+        height: 30px;
+        width: 380px;
+        background-color: rgb(102, 96, 108);
+    }
+
+    .pp4,
+    .pp5,
+    .pp6 {
+        display: inline-block;
+        width: 360px;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: 235px;
+        border: solid black;
+        color: white;
+        /* display: none; */
+    }
+
+    .box6 {
+        display: flex;
+        border: solid black;
+        height: 340px;
+        width: 1300px;
+        margin-top: 20px;
+        margin-left: 65px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .rom,
+    .cor,
+    .qcl {
+        width: 380px;
+        height: 300px;
+        background-color: blueviolet;
+        border-radius: 10px;
+    }
+
+
+    .p7,
+    .p8,
+    .p9 {
+        height: 30px;
+        width: 380px;
+        background-color: rgb(102, 96, 108);
+    }
+
+    .pp7,
+    .pp8,
+    .pp9 {
+        display: inline-block;
+        width: 360px;
+        height: 40px;
+        margin-left: 20px;
+        margin-top: 235px;
+        border: solid black;
+        color: white;
+        /* display: none; */
+    }
+
+    .sign {
+        float: left;
+        width: 200px;
+        height: 45px;
+        margin-top: 20px;
+        margin-left: 520px;
+        line-height: 45px;
+        text-align: center;
+        vertical-align: middle;
+        border-radius: 20px;
+        background-color: black;
+        color: white;
+    }
+
+    .or {
+        float: left;
+        width: 160px;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 60px;
+        line-height: 40px;
+        text-align: center;
+        vertical-align: middle;
+        /* border: solid black; */
+    }
+</style>
+
+<body>
+    <div class="box1">
+        <div class="one">Find talent</div>
+        <div class="one">Inspiration</div>
+        <div class="sanjiao">Learn design</div>
+        <div class="caidan">
+            <h3 class="H">UX Diploma</h3>
+            <h4 class="hh1">in partnership with UX Design Institute</h4>
+            <h3 class="h">Live interactive workshops</h3>
+            <h4 class="hh2">with design professionals</h4>
+        </div>
+        <div class="two">Jobs</div>
+        <div class="one">Go Pro</div>
+        <div class="three">Duibbble</div>
+        <!-- plaeholder:提示词 -->
+        <input type="text" class="text1" placeholder="Search">
+        <div class="four">Log in</div>
+        <div class="five">Sign up</div>
+        <div class="ad">
+            <div class="ad1">
+                Build and style your site exactly how you want
+            </div>
+            <div class="ad2">See more<img src="ad1.png" alt="" class="img1"></div>
+            <div class="ad3"><img src="ad2.png" width="50px" height="50px" alt=""></div>
+            <div class="ad4">Webflow</div>
+            <div class="ad5"><img src="ad.png" width="40px" height="40px"></div>
+        </div>
+    </div>
+    <div class="hh3">Discover the world's top</div><br>
+    <div class="hh3">designers & creatives</div>
+    <h4>Dribbble is the leading destination to find & showcase creative work and</h4>
+    <h4>home to the world's best design professionals.</h4>
+    <input type="text" placeholder="Search 18 millon+shots..." class="text2"><br>
+    <div class="box2"><br>
+        <div class="Trending">Trending searches</div>
+        <div class="landing">landing page</div>
+        <div class="ios">ios</div>
+        <div class="food">food</div>
+        <div class="landing">landingpage</div>
+        <div class="uxdesign">uxdesign</div>
+        <div class="app">app design</div>
+    </div>
+    <div class="box3">
+        <div class="pop">Popular</div>
+        <div class="dis">Discover</div>
+        <div class="ani">Animation</div>
+        <div class="bra">Branding</div>
+        <div class="ill">Illustration</div>
+        <div class="mob">Mobile</div>
+        <div class="pri">Print</div>
+        <div class="pro">Product Design</div>
+        <div class="typ">Typography</div>
+        <div class="web">Wed D</div>
+        <div class="fil">Filters</div>
+    </div>
+    <div class="box4">
+        <div class="ved">
+            <div class="pp1">Brand Illustrations for kode...</div>
+        </div>
+        <div class="srd">
+            <div class="pp2">The beetle Backs/Tuck Box</div>
+        </div>
+        <div class="ben">
+            <div class="pp3">Lucyanna</div>
+        </div>
+        <div class="p1">Vedant Hegde</div>
+        <div class="p2">Sridjan Vidakovic</div>
+        <div class="p3">Benoit Drigny</div>
+    </div>
+    <div class="box5">
+        <div class="ale">
+            <div class="pp4">The birth of Venus</div>
+        </div>
+        <div class="fra">
+            <div class="pp5">Blacktown Sea Eagles</div>
+        </div>
+        <div class="squ">
+            <div class="pp6">Start Your Free Trial</div>
+        </div>
+        <div class="p4">Aleksnader Savic/almigor</div>
+        <div class="p5">Fraser Davidson</div>
+        <div class="p6">Squarespace</div>
+    </div>
+    <div class="box6">
+        <div class="rom">
+            <div class="pp7">Skyline</div>
+        </div>
+        <div class="cor">
+            <div class="pp8">Stone House</div>
+        </div>
+        <div class="qcl">
+            <div class="pp9">Customer Service Landing...</div>
+        </div>
+        <div class="p7">Romain Trystram</div>
+        <div class="p8">Coric Design</div>
+        <div class="p9">QClay</div>
+    </div>
+    <div class="box7">
+        <div class="sign">Sign up to continue</div>
+        <div class="or">or sign in</div>
+    </div>
+    <script>
+
+
+        var sanjiao = document.querySelector('.sanjiao');
+        var caidan = document.querySelector('.caidan');
+        sanjiao.onmouseover = function () {
+            caidan.style.display = 'block';
+        }
+        sanjiao.onmouseout = function () {
+            caidan.style.display = 'none';
+        }
+        var ad = document.querySelector('.ad');
+        var ad1 = document.querySelector('.ad5');
+        ad1.onclick = function () {
+            ad.style.display = 'none';
+        }
+
+
+    </script>
+
+</body>
+
+</html>
